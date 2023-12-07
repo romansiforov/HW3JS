@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+}
+
+.add-user-btn {
+    background: cadetblue;
+    margin: 5rem;
+    padding: 2rem;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 10%;
+    cursor: pointer;
+}

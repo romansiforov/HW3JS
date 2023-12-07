@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Task15 - User registration</title>
+</head>
+
+<body>
+    <p>
+        Створити програму реєстратор нового учасника. Ми маємо натиснути на кнопку додати нового студента, при натиску
+        на кнопку <br>
+        у вас має з'явитись вікно запиту інформації якe приймає дані у вигляді "Імя.Прізвище.Мова програмування".
+        Виводити кожного доданого <br>
+        студента на сторінку у таблицю, у футері таблиці має бути поле яке рахуватиме загальну кількість студентів.
+    </p>
+    <button class="add-user-btn" onclick="addUser()">Add User</button>
+    <script>
+        function addUser() {
+            const userData = new Array(2);
+            for (let i = 0; i < userData.length; i++) {
+                userData[i] = new Array();
+                userData[i].push(prompt("Enter user name"), prompt("Enter user last name"), prompt("Enter user'sprogramming language"));
+            }
+
+                document.write(
+                    `<table style="border: 1px solid black;">
+                        <tr>
+                            <td style="border: 1px solid;">Name</td>
+                            <td style="border: 1px solid;">Last Name</td>
+                            <td style="border: 1px solid;">Programming language</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid;">${userData[0][0]}</td>
+                            <td style="border: 1px solid;">${userData[0][1]}</td>
+                            <td style="border: 1px solid;">${userData[0][2]}</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid;">${userData[1][0]}</td>
+                            <td style="border: 1px solid;">${userData[1][1]}</td>
+                            <td style="border: 1px solid;">${userData[1][2]}</td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td>${userData.length}</td>
+                        </tr>
+                    </table>
+                `);
+            }
+
+    </script>
+</body>
+
+</html>
